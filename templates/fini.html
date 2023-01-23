@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #element1, #element2, #element3, #element4 {
+            display: none;
+        }
+
+        .input {
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        input {
+            border: none;
+            border-bottom: 2px solid #000;
+        }
+
+        h3 {
+            font-family: "Roboto", sans-serif;
+            color: #1c2643;
+        }
+    </style>
+</head>
+<body>
+    <div class="form" style="
+width: auto;
+	height: auto;
+	background: #fff;
+	color: #000;
+	top: 1%;
+	left: 30%;
+	position: absolute;
+
+	box-sizing: border-box;
+	padding: 70px 30px;
+	border-radius: 25px ;
+	border: solid 3px #0a2558 ;">
+        <form action="/traitment" method="post">
+            <ul style="list-style-type:none;">
+                <li>
+                    <div class="title">
+                        <h1>
+                            Maintenance Report Form
+                        </h1>
+                    </div>
+                </li>
+                <li>
+                    <hr>
+                </li>
+                <li>
+                    <div class="title">
+                        <h2>General Information</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Title of Organization/Department</h3>
+                        <input type="text" name="title" placeholder="Title of Organization/Department">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Owner Name</h3>
+                        <input type="text" name="Owner_Name" placeholder="Owner Name">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Phone Number</h3>
+                        <input type="text" name="Phone" placeholder="Phone Number">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>email</h3>
+                        <input type="email" name="email" placeholder="example@example.com">
+                    </div>
+                </li>
+                <br>
+                <li>
+                    <hr>
+                </li>
+                <li>
+                    <div class="title">
+                        <h2>Maintenance Report Information</h2>
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Date & Time</h3>
+                        <input type="datetime-local" name="datetime-local">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Location</h3>
+                        <input type="text" name="Location" placeholder="Location">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Maintenance Team</h3>
+                        <input type="text" name="Team" placeholder="Maintenance Team">
+                    </div>
+                </li>
+                <li>
+                    <div class="input">
+                        <h3>Headed by</h3>
+                        <input type="text" name=" Headed_by" placeholder=" Headed by">
+                    </div>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1">noises</label><br>
+                    <input type="number" name="noises" value="" placeholder="noises" id="element1" style="display: none;">
+                </li>
+                <li>
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2">Vibration</label><br>
+                    <input type="number" name="Vibration" value="" placeholder="Vibration" id="element2" style="display: none;">
+                </li>
+
+                <li>
+                    <input type="checkbox" id="checkbox3">
+                    <label for="checkbox3">Smells</label><br>
+                    <input type="number" name="Smells" value="" placeholder="Smells" id="element3" style="display: none;">
+                </li>
+
+                <li>
+                    <input type="checkbox" id="checkbox4">
+                    <label for="checkbox4">Leaks</label><br>
+                    <input type="number" name="Leaks" value="" placeholder="Leaks" id="element4" style="display: none;">
+                </li>
+                <li>
+                    <div>
+                        <input type="Submit" value="Submit" id="Submit" style="
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+">
+                    </div>
+                </li>
+
+            </ul>
+        </form>
+    </div>
+    <script type="text/javascript">
+	const checkbox1 = document.getElementById("checkbox1");
+const element1 = document.getElementById("element1");
+
+const checkbox2 = document.getElementById("checkbox2");
+const element2 = document.getElementById("element2");
+
+const checkbox3 = document.getElementById("checkbox3");
+const element3 = document.getElementById("element3");
+
+const checkbox4 = document.getElementById("checkbox4");
+const element4 = document.getElementById("element4");
+
+checkbox1.addEventListener("click", function() {
+    element1.style.display = checkbox1.checked ? "block" : "none";
+});
+checkbox2.addEventListener("click", function() {
+    element2.style.display = checkbox2.checked ? "block" : "none";
+});
+checkbox3.addEventListener("click", function() {
+    element3.style.display = checkbox3.checked ? "block" : "none";
+});
+checkbox4.addEventListener("click", function() {
+    element4.style.display = checkbox4.checked ? "block" : "none";
+});
+    </script>
+
+</body>
+</html>
